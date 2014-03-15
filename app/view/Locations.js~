@@ -1,0 +1,12 @@
+Ext.define('raxa.view.Locations',{
+	extend: 'Ext.dataview.List',
+	alias: 'widget.locations',
+	xtype: 'locations',
+	config: {
+		items: [{
+			xtype: 'label',
+			text: 'Max Hospital'
+		}]
+	}
+});
+

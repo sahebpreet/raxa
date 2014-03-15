@@ -1,0 +1,45 @@
+Ext.define('raxa.view.Main', {
+    extend: 'Ext.tab.Panel',
+    xtype: 'main',
+    fullscreen: true,
+    requires: [
+        'Ext.TitleBar',
+	'Ext.dataview.List',
+        'raxa.view.SearchLocation',
+	'raxa.view.SearchDisease',
+	'raxa.view.GetLocationToolbar',
+	'raxa.view.Locations'
+    ],
+    config: {
+        tabBarPosition: 'bottom',
+
+        items: [
+            {
+               title: 'Welcome',
+                iconCls: 'home',
+
+                scrollable: true,
+
+                items: [
+		{
+			xtype: 'searchlocation'
+		},
+		{
+			xtype: 'searchdisease'
+		},
+		{
+			xtype: 'getlocationtoolbar',
+			docked: 'top',
+			title: 'Raxa Demo App'
+		}]
+		/*items: [{
+			xtype: 'toolbar',
+			docked: 'top'
+		},
+		{
+			xtype: 'locations',
+		}]*/                
+            }
+        ]
+    }
+});

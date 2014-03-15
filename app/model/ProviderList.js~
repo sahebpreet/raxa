@@ -1,0 +1,12 @@
+Ext.define( 'raxa.model.ProviderList', {
+	extend: 'Ext.data.Model',
+	fields: ['uuid','display','identifiers','person','identifier','attributes','retired','auditInfo','links','resourceVersion'],
+	proxy: {
+		type: 'ajax',
+		url: 'http://localhost:8080/openmrs-standalone/ws/rest/v1/provider?v=full',
+		reader: {
+			type: 'json',
+			root: 'provider'
+		}
+	}
+});
