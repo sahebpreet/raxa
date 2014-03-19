@@ -6,8 +6,8 @@ Ext.define('raxa.view.Locations' ,{
   requires: [ 'raxa.store.Locations', 'Ext.data.Store' ],
   config: {
     deferEmptyText: true,
-    emptyText: 'No Data is available',
-    itemTpl: '<div>{display} (10.34 Km)</div><div>★★★☆☆</div>',
+    emptyText: Messages.raxa.view.Locations.emptyText,
+    itemTpl: Messages.raxa.view.Locations.itemTpl,
     store: {xclass : 'raxa.store.Locations'},
     onItemDisclosure: function( item, record, target, index, e, eOpts ){      
       mainView = Ext.getCmp ('mainView');
@@ -15,6 +15,7 @@ Ext.define('raxa.view.Locations' ,{
       console.log(locationData);
       mainView.add([{
 	xtype: 'map',
+	id: 'googleMap',
 	mapOptions: {
 	  center: new google.maps.LatLng ( locationData.latitude, locationData.longitude ),
 	  mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -22,11 +23,11 @@ Ext.define('raxa.view.Locations' ,{
 	},
 	initialize: function() {
 	var gMap = this.getMap();
-	console.log(gMap);
+	console.log(gMap.getCenter());
 	var marker = new google.maps.Marker({
 	  map: gMap,
 	  animation: google.maps.Animation.BOUNCE,
-	  position: gMap.center
+	  position: gMap.getCenter()
 	});
       }
       }]);

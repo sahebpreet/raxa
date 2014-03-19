@@ -6,8 +6,8 @@ Ext.define('raxa.view.Providers' ,{
   requires: [ 'raxa.store.Providers', 'Ext.data.Store' ],
   config: {
     deferEmptyText: true,
-    emptyText: 'No Data is available',
-    itemTpl: '<div>{display} ({age} Km)</div><div>★★★☆☆</div>',
+    emptyText: Messages.raxa.view.Providers.emptyText,
+    itemTpl: Messages.raxa.view.Providers.itemTpl,
     store: {xclass : 'raxa.store.Providers'},
     onItemDisclosure: function( item, record, target, index, e, eOpts ){
       url=item.data.person.identifiers[0].links[0].uri;
@@ -30,7 +30,6 @@ Ext.define('raxa.view.Providers' ,{
 	  }]);
 	},
 	failure: function(result) {
-	  Ext.Msg.alert('Error', 'There was an error retrieving the location.');
 	  console.log(result);
 	}
       });

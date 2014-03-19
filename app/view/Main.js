@@ -8,14 +8,21 @@ Ext.define('raxa.view.Main', {
     fullscreen: true,
     requires: [
         'Ext.TitleBar',
-	'Ext.Map',
+	//'Ext.Map',
         //'raxa.view.SearchLocation',
 	//'raxa.view.SearchDisease',
 	//'raxa.view.GetLocationToolbar',
-	'raxa.view.Locations',
-	'raxa.view.Providers'
+	//'raxa.view.Locations',
+	//'raxa.view.Providers',
+	//'raxa.view.test',
+	'raxa.view.selectLocale'
     ],
+
+// 	setDefaultButtonText: function(text){
+// 	  this.callParent(text);
+// 	},
     config: {
+	defaultBackButtonText: Messages.raxa.view.Main.defaultBackButtonText,
         tabBarPosition: 'bottom',
 	layout: {
 	    type: 'card'
@@ -23,38 +30,12 @@ Ext.define('raxa.view.Main', {
 
 	items: [{
 	  xtype: 'panel',
-	  title: 'RAXA DEMO APP',
-	      items: [{
-		xtype: 'button',
-		text: 'Get Locations',
-		ui: 'forward',
-		width: 200,
-		margin:30,
-		handler: function (){
-		  mainView = Ext.getCmp ('mainView');
-		  mainView.add ({
-		    xtype: 'locations',
-		    title: 'Locations Near You'
-		  });
-		}
-	      },
-	      {
-		xtype: 'button',
-		text: 'Get Doctors',
-		ui: 'forward',
-		width: 200,
-		margin:30,
-		handler: function (){
-		  mainView = Ext.getCmp ('mainView');
-		  mainView.add ({
-		    xtype: 'providers',
-		    title: 'Doctors Near You'
-		  });
-		}
-	      }]
-	    //}
+	  id : 'mainContainer',
+	  title: Messages.raxa.view.Main.title,
+	  items: [{
+	    xtype: 'selectlocale',
+	  }]
 	}]
-
         /*items: [
             {
                title: 'Welcome',
