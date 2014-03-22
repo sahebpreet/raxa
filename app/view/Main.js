@@ -18,9 +18,6 @@ Ext.define('raxa.view.Main', {
 	'raxa.view.selectLocale'
     ],
 
-// 	setDefaultButtonText: function(text){
-// 	  this.callParent(text);
-// 	},
     config: {
 	defaultBackButtonText: Messages.raxa.view.Main.defaultBackButtonText,
         tabBarPosition: 'bottom',
@@ -36,31 +33,5 @@ Ext.define('raxa.view.Main', {
 	    xtype: 'selectlocale',
 	  }]
 	}]
-        /*items: [
-            {
-               title: 'Welcome',
-                iconCls: 'home',
-
-                scrollable: true,
-
-                /*items: [
-		{
-			xtype: 'searchlocation'
-		},
-		{
-			xtype: 'searchdisease'
-		},
-		{
-			xtype: 'getlocationtoolbar',
-			docked: 'top',
-			title: 'Raxa Demo App'
-		}]*/
-		/*items: [
-		{
-			xtype: 'locations',
-			title: 'Locations'
-		}]    */            
-            //}
-       // ]
     }
 });

@@ -16,7 +16,9 @@ Ext.define('raxa.controller.Locations', {
 	locationData = record.data;
 	mainView.add([{
 	    xtype: 'map',
-	    id: 'googleMap',
+	    config: {
+		centered:true
+	    },
 	    mapOptions: {
 		center: new google.maps.LatLng ( locationData.latitude, locationData.longitude ),
 		mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -24,6 +26,11 @@ Ext.define('raxa.controller.Locations', {
 	    },
 	    initialize: function() {
 		var gMap = this.getMap();
+		google.maps.event.addListenerOnce(gMap, 'idle', function() {
+		    center = gMap.getCenter();
+		    google.maps.event.trigger(gMap, 'resize');
+		    gMap.setCenter(center);
+		});
 		var marker = new google.maps.Marker({
 		    map: gMap,
 		    animation: google.maps.Animation.BOUNCE,

@@ -4,7 +4,8 @@ Ext.define('raxa.view.LocationsMap',{
 	alias: 'widget.locationsmap',
 	requires: ['Ext.Map'],
 	config: {
-		useCurrentLocation: true
+		useCurrentLocation: true,
+		centered: true
 	}
 });
 

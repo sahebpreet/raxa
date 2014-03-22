@@ -2,7 +2,7 @@ Ext.define('raxa.view.test',{
   extend: 'Ext.Panel',
   alias: 'widget.test',
   xtype: 'test',
-  requires: [ 'raxa.view.Locations', 'raxa.view.Providers' ],
+  requires: [ 'raxa.view.Locations', 'raxa.view.Providers'],
   config: {
     layout:{
       type  : 'vbox',
@@ -14,13 +14,7 @@ Ext.define('raxa.view.test',{
       ui: 'forward',
       width: 300,
       margin:30,
-      handler: function (){
-	mainView = Ext.getCmp ('mainView');
-	mainView.add ({
-	  xtype: 'locations',
-	  title: Messages.raxa.view.Locations.title
-	});
-      }
+      id: 'getLocationsButton'
     },
     {
       xtype: 'button',
@@ -28,13 +22,7 @@ Ext.define('raxa.view.test',{
       ui: 'forward',
       width: 300,
       margin:30,
-      handler: function (){
-	mainView = Ext.getCmp ('mainView');
-	mainView.add ({
-	  xtype: 'providers',
-	  title: Messages.raxa.view.Providers.title
-	});
-      }
+      id : 'getProvidersButton'
     }]
   }
 });
