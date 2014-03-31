@@ -9,5 +9,6 @@ Messages = {
       Providers : { },
       Main : { }
     }
-  }
+  },
+  distanceApi : { }
 }

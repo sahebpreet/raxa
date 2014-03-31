@@ -8,6 +8,7 @@ Ext.define('raxa.view.Main', {
     fullscreen: true,
     requires: [
         'Ext.TitleBar',
+	'Ext.MessageBox',
 	//'Ext.Map',
         //'raxa.view.SearchLocation',
 	//'raxa.view.SearchDisease',

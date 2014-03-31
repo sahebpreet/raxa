@@ -24,10 +24,6 @@ Ext.application({
     models: [
       'LocationList'
     ],
-    
-    stores: [
-      'Locations'
-    ],
 
      controllers: [
 	'selectLocale'

@@ -18,7 +18,7 @@ Ext.define('raxa.view.test',{
     },
     {
       xtype: 'button',
-      text: Messages.raxa.view.test.getProvidersButton.text,
+      text: Messages.raxa.view.test.getProvidersButton.text, 
       ui: 'forward',
       width: 300,
       margin:30,

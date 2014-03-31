@@ -3,7 +3,7 @@ Ext.define('raxa.view.selectLocale',{
   alias: 'widget.selectlocale',
   xtype: 'selectlocale',
   //id : "selectLocale",
-  requires: [ 'Ext.field.Select' ],
+  requires: [ 'Ext.field.Select','Ext.device.Geolocation' ],
   config: {
     layout:{
       type  : 'vbox',

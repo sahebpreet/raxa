@@ -5,6 +5,7 @@ Ext.define( 'raxa.model.LocationList', {
 	  fields: [
 	    'uuid',
 	    'display',
+	    'distance',
 	    'name',
 	    'description',
 	    'address1',
@@ -29,11 +30,9 @@ Ext.define( 'raxa.model.LocationList', {
 	    'links',
 	    'resourceVersion'
 	  ],
-	  //fields:[ 'name','age'],
 	  proxy: {
 		  type: 'ajax',
 		  url: '/openmrs-standalone/ws/rest/v1/location?v=full',
-		  //url: '/raxa/app/model/data/users.json',
 		  reader: {
 			  type: 'json',
 			  rootProperty: 'results'
@@ -45,20 +44,3 @@ Ext.define( 'raxa.model.LocationList', {
 	autoload: true
 	}
 });
-/*
-Ext.define('raxa.model.LocationList', {
-
-    extend: 'Ext.data.Model',
-
-    config: {
-        fields: ['id', 'name', 'age', 'gender']
-        /*proxy: {
-            type: 'rest',
-            url : 'data/users',
-            reader: {
-                type: 'json',
-                rootProperty: 'users'
-            }
-        }*/
-  //  }
-//});
