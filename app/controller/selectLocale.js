@@ -61,7 +61,7 @@ Ext.define('raxa.controller.selectLocale', {
 		longitude: 77.044978
 	    }
 	};
-	this.geolocation.initialConfig.success(position);
+// 	this.geolocation.initialConfig.success(position);
 	//this.onGeolocationSuccess(position);
     },
     onGeolocationSuccess: function(position){

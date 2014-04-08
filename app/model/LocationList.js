@@ -32,7 +32,7 @@ Ext.define( 'raxa.model.LocationList', {
 	  ],
 	  proxy: {
 		  type: 'ajax',
-		  url: '/openmrs-standalone/ws/rest/v1/location?v=full',
+		  url: '/openmrs/ws/rest/v1/location?v=full',
 		  reader: {
 			  type: 'json',
 			  rootProperty: 'results'

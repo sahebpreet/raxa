@@ -25,6 +25,10 @@ Ext.define('raxa.view.selectLocale',{
       {
 	text : 'Punjabi',
 	value: 'pa'
+      },
+      {
+	text: 'Nepali',
+	value: 'ne'
       }]
     },
     {
